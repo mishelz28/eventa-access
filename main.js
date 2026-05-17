@@ -75,29 +75,6 @@
   });
   renderCart();
 
-  const cookieBanner = document.querySelector("[data-cookie-banner]");
-  const cookieStatus = document.querySelector("[data-cookie-status]");
-  const storedConsent = localStorage.getItem("eventa-cookie-consent");
-
-  if (cookieBanner && !storedConsent) {
-    cookieBanner.classList.add("is-visible");
-    cookieBanner.setAttribute("tabindex", "-1");
-    cookieBanner.setAttribute("aria-modal", "false");
-  }
-
-  document.querySelectorAll("[data-cookie-choice]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const choice = button.dataset.cookieChoice || "notwendig";
-      localStorage.setItem("eventa-cookie-consent", choice);
-      if (cookieStatus) {
-        cookieStatus.textContent = `Cookie-Auswahl gespeichert: ${choice}.`;
-      }
-      if (cookieBanner) {
-        window.setTimeout(() => cookieBanner.classList.remove("is-visible"), 700);
-      }
-    });
-  });
-
   const contactForm = document.querySelector("[data-contact-form]");
   if (contactForm) {
     contactForm.addEventListener("submit", (event) => {
