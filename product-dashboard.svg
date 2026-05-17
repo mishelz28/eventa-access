@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Barrierearme Ticketbuchung</title>
+  <desc id="desc">Illustration eines Ticketshops mit Saalplan, Untertitel-Hinweis, Rollstuhlplätzen und Warenkorb.</desc>
+  <rect width="960" height="620" rx="28" fill="#111a24"/>
+  <rect x="34" y="34" width="892" height="552" rx="24" fill="#fffdf8"/>
+  <rect x="34" y="34" width="892" height="88" rx="24" fill="#21343a"/>
+  <circle cx="86" cy="78" r="16" fill="#c95f4b"/>
+  <circle cx="132" cy="78" r="16" fill="#006d6f"/>
+  <circle cx="178" cy="78" r="16" fill="#f5b841"/>
+  <text x="232" y="86" fill="#fff" font-size="32" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Eventa Access</text>
+  <rect x="72" y="158" width="520" height="332" rx="20" fill="#ffffff" stroke="#d7cdbd" stroke-width="3"/>
+  <path d="M132 236c62-50 322-50 384 0v58H132v-58z" fill="#006d6f"/>
+  <text x="237" y="274" fill="#fff" font-size="24" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Bühne</text>
+  <g fill="#21343a">
+    <circle cx="160" cy="354" r="16"/><circle cx="214" cy="354" r="16"/><circle cx="268" cy="354" r="16"/><circle cx="322" cy="354" r="16"/><circle cx="376" cy="354" r="16"/><circle cx="430" cy="354" r="16"/><circle cx="484" cy="354" r="16"/>
+    <circle cx="160" cy="412" r="16"/><circle cx="214" cy="412" r="16"/><circle cx="268" cy="412" r="16"/><circle cx="322" cy="412" r="16"/><circle cx="376" cy="412" r="16"/><circle cx="430" cy="412" r="16"/><circle cx="484" cy="412" r="16"/>
+  </g>
+  <g fill="#006d6f">
+    <rect x="120" y="516" width="74" height="42" rx="12"/>
+    <rect x="216" y="516" width="74" height="42" rx="12"/>
+    <rect x="312" y="516" width="74" height="42" rx="12"/>
+  </g>
+  <text x="410" y="544" fill="#21343a" font-size="22" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Rollstuhlplätze</text>
+  <rect x="632" y="158" width="254" height="86" rx="18" fill="#fff" stroke="#d7cdbd" stroke-width="3"/>
+  <circle cx="674" cy="201" r="18" fill="#f5b841"/>
+  <text x="710" y="196" fill="#21343a" font-size="22" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Untertitel</text>
+  <text x="710" y="224" fill="#596667" font-size="18" font-family="Aptos, Segoe UI, sans-serif">Leinwand sichtbar</text>
+  <rect x="632" y="270" width="254" height="86" rx="18" fill="#fff" stroke="#d7cdbd" stroke-width="3"/>
+  <circle cx="674" cy="313" r="18" fill="#006d6f"/>
+  <text x="710" y="308" fill="#21343a" font-size="22" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Assistenz</text>
+  <text x="710" y="336" fill="#596667" font-size="18" font-family="Aptos, Segoe UI, sans-serif">Begleitung gratis</text>
+  <rect x="632" y="382" width="254" height="108" rx="18" fill="#21343a"/>
+  <text x="666" y="427" fill="#fff" font-size="24" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Warenkorb</text>
+  <text x="666" y="464" fill="#f8ddb0" font-size="20" font-family="Aptos, Segoe UI, sans-serif">2 Tickets - EUR 58</text>
+  <path d="M126 186l14-28 14 28 28 14-28 14-14 28-14-28-28-14 28-14zM792 92l9-18 9 18 18 9-18 9-9 18-9-18-18-9 18-9z" fill="#c95f4b"/>
+</svg>

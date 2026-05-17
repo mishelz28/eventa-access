@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Eventa Access Bildmarke</title>
+  <desc id="desc">Rundes Zeichen mit Ticket, Sternen und Zugangsbogen.</desc>
+  <defs>
+    <linearGradient id="g" x1="28" y1="212" x2="212" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#006d6f"/>
+      <stop offset="0.5" stop-color="#5d3857"/>
+      <stop offset="1" stop-color="#f5b841"/>
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="120" r="108" fill="#111a24"/>
+  <circle cx="120" cy="120" r="94" fill="url(#g)" opacity="0.92"/>
+  <path d="M63 82c0-11 9-20 20-20h74c11 0 20 9 20 20v24c-11 0-20 9-20 20s9 20 20 20v12c0 11-9 20-20 20H83c-11 0-20-9-20-20v-12c11 0 20-9 20-20s-9-20-20-20V82z" fill="#fff"/>
+  <path d="M91 149c8-20 18-35 29-35s21 15 29 35" fill="none" stroke="#111a24" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="120" cy="93" r="17" fill="#111a24"/>
+  <path d="M83 86h20M137 86h20M90 167h60" stroke="#111a24" stroke-width="10" stroke-linecap="round"/>
+  <path d="M54 63l9-18 9 18 18 9-18 9-9 18-9-18-18-9 18-9zM181 45l6-12 6 12 12 6-12 6-6 12-6-12-12-6 12-6z" fill="#fff"/>
+</svg>

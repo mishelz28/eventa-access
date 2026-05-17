@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ticketweg ohne Barrieren</title>
+  <desc id="desc">Drei Schritte von Eventauswahl über Zugangsinformationen bis zum barrierearmen Einlass.</desc>
+  <rect width="760" height="420" rx="26" fill="#111a24"/>
+  <path d="M0 274c98-58 190-70 276-36s178 32 276-6 167-28 208 28v160H0V274z" fill="#21343a"/>
+  <g fill="none" stroke="#f5b841" stroke-width="4" opacity="0.9">
+    <path d="M96 72l18-38 18 38 38 18-38 18-18 38-18-38-38-18 38-18z"/>
+    <path d="M613 78l14-30 14 30 30 14-30 14-14 30-14-30-30-14 30-14z"/>
+  </g>
+  <path d="M118 232h524" stroke="#006d6f" stroke-width="8" stroke-linecap="round"/>
+  <g>
+    <circle cx="142" cy="232" r="56" fill="#c95f4b"/>
+    <path d="M118 210h48v44h-48z" fill="#fff"/>
+    <path d="M118 224h48" stroke="#111a24" stroke-width="5"/>
+    <text x="91" y="326" fill="#fff" font-size="24" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Event wählen</text>
+  </g>
+  <g>
+    <circle cx="380" cy="232" r="56" fill="#f5b841"/>
+    <path d="M354 253c7-23 16-37 26-37s19 14 26 37" fill="none" stroke="#111a24" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="380" cy="205" r="13" fill="#111a24"/>
+    <text x="292" y="326" fill="#fff" font-size="24" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Zugang prüfen</text>
+  </g>
+  <g>
+    <circle cx="618" cy="232" r="56" fill="#006d6f"/>
+    <path d="M590 251h56M596 218h44M602 235h32" stroke="#111a24" stroke-width="9" stroke-linecap="round"/>
+    <text x="560" y="326" fill="#fff" font-size="24" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Einlass</text>
+  </g>
+</svg>

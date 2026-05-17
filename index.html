@@ -1,0 +1,152 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eventa Access | Einfache Eventtickets</title>
+  <meta name="description" content="Fiktiver einfacher Ticketshop fuer Events mit klaren Infos zu Ort, Preis und Zugang.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Eventa Access Startseite"><img src="brand-symbol.svg" alt="" width="42" height="42"><span>Eventa Access</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span><span class="sr-only">Navigation oeffnen</span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation" data-nav>
+        <ul>
+          <li><a href="index.html" aria-current="page">Tickets</a></li>
+          <li><a href="features.html">Events</a></li>
+          <li><a href="about.html">Projekt</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero simple-hero" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <p class="eyebrow">Eventtickets</p>
+        <h1 id="hero-title">Einfach Tickets finden und Zugang vorher kennen.</h1>
+        <p class="lead">Eventa Access ist ein fiktiver Ticketshop fuer Kultur, Musik und Shows. Jede Karte zeigt direkt Preis, Ort und wichtige Zugangsinformationen.</p>
+        <div class="hero-actions">
+          <a class="button" href="#tickets">Tickets ansehen</a>
+          <a class="button secondary" href="contact.html">Kontakt</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tickets" class="section" aria-labelledby="tickets-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Auswahl</p>
+          <h2 id="tickets-title">Drei Beispiel-Events</h2>
+          <p class="lead">Die Buchung ist nur eine Demo. Es werden keine echten Tickets verkauft und keine Zahlungsdaten verarbeitet.</p>
+        </div>
+
+        <div class="shop-layout simple-shop">
+          <div class="grid three" role="list" aria-label="Ticketangebote">
+            <article class="price-card" role="listitem">
+              <p class="ticket-meta">20. Juni | MuseumsQuartier Wien</p>
+              <h3>Open-Air Nacht</h3>
+              <div class="access-tags" aria-label="Zugangshinweise">
+                <span>Stufenfreier Eingang</span>
+                <span>Sitzplaetze</span>
+              </div>
+              <p class="price">EUR 29</p>
+              <ul>
+                <li>Musikabend im Freien.</li>
+                <li>Klare Infos zu Eingang und Sitzbereich.</li>
+              </ul>
+              <button class="button" type="button" data-add-plan data-plan="Open-Air Nacht Ticket" data-price="29">Auswaehlen</button>
+            </article>
+
+            <article class="price-card" role="listitem">
+              <p class="ticket-meta">04. Juli | Stadtsaal Wien</p>
+              <h3>Kulturabend</h3>
+              <div class="access-tags" aria-label="Zugangshinweise">
+                <span>Untertitel</span>
+                <span>Reservierter Platz</span>
+              </div>
+              <p class="price">EUR 49</p>
+              <ul>
+                <li>Buehne, Musik und kurze Lesungen.</li>
+                <li>Hinweise zu Aufzug und Sitzplatz.</li>
+              </ul>
+              <button class="button" type="button" data-add-plan data-plan="Kulturabend Ticket" data-price="49">Auswaehlen</button>
+            </article>
+
+            <article class="price-card" role="listitem">
+              <p class="ticket-meta">18. August | Donauinsel</p>
+              <h3>Festival Tag</h3>
+              <div class="access-tags" aria-label="Zugangshinweise">
+                <span>Ruhige Zone</span>
+                <span>Audioinfos</span>
+              </div>
+              <p class="price">EUR 89</p>
+              <ul>
+                <li>Tagespass fuer mehrere Buehnen.</li>
+                <li>Infos zu Wegen, Pausen und Einlass.</li>
+              </ul>
+              <button class="button" type="button" data-add-plan data-plan="Festival Tag Ticket" data-price="89">Auswaehlen</button>
+            </article>
+          </div>
+
+          <aside class="cart-panel simple-cart" aria-labelledby="cart-title">
+            <h2 id="cart-title">Warenkorb</h2>
+            <ul class="cart-list" data-cart-list></ul>
+            <div class="cart-total"><span>Summe</span><strong data-cart-total>EUR 0</strong></div>
+            <button class="button secondary" type="button" data-checkout>Demo-Checkout</button>
+            <p class="status" role="status" aria-live="polite" data-cart-status></p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="info-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Vor dem Kauf</p>
+          <h2 id="info-title">Alles Wichtige auf einen Blick</h2>
+        </div>
+        <div class="grid three">
+          <article class="legal-box">
+            <h3>Preis und Ort</h3>
+            <p>Jedes Event zeigt Datum, Ort und Ticketpreis direkt auf der Karte.</p>
+          </article>
+          <article class="legal-box">
+            <h3>Zugang</h3>
+            <p>Hinweise zu Eingang, Sitzplatz, Untertiteln oder ruhigen Bereichen stehen vor der Auswahl.</p>
+          </article>
+          <article class="legal-box">
+            <h3>Demo-Projekt</h3>
+            <p>Der Shop ist ein Unterrichtsprojekt. Der Warenkorb speichert keine echten Bestellungen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>Eventa Access GmbH, Wien. Fiktives studentisches Ticketshop-Projekt.</p>
+      <div class="footer-links" aria-label="Rechtliche Seiten">
+        <a href="projektplan.html">Projektplan</a>
+        <a href="accessibility.html">Barrierefreiheit</a>
+        <a href="privacy.html">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+    </div>
+  </footer>
+  <aside class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" data-cookie-banner>
+    <h2 id="cookie-title">Cookies</h2>
+    <p id="cookie-text">Diese Demo nutzt nur lokale Speicherung fuer den Hinweis. Analyse-Cookies sind nur ein Mock-up.</p>
+    <div class="cookie-actions"><button class="button" type="button" data-cookie-choice="notwendig">Nur notwendige</button><button class="button secondary" type="button" data-cookie-choice="analyse-mock">Analyse-Mock erlauben</button></div>
+    <p class="status" role="status" aria-live="polite" data-cookie-status></p>
+  </aside>
+</body>
+</html>
+

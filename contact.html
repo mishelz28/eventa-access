@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt | Eventa Access</title>
+  <meta name="description" content="Kontaktseite von Eventa Access mit barrierearmem Mock-Kontaktformular.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Eventa Access Startseite"><img src="brand-symbol.svg" alt="" width="42" height="42"><span>Eventa Access</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span><span class="sr-only">Navigation Ã¶ffnen</span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation" data-nav>
+        <ul>
+          <li><a href="index.html">Tickets</a></li>
+          <li><a href="features.html">Events</a></li>
+          <li><a href="about.html">About & Marke</a></li>
+          <li><a href="license.html">Lizenz</a></li>
+          <li><a href="privacy.html">Datenschutz</a></li>
+          <li><a href="contact.html" aria-current="page">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Kontakt</p>
+        <h1>Fragen zu Tickets oder Barrierefreiheit?</h1>
+        <p class="lead">Das Formular ist ein Mock-up. Es zeigt Pflichtfelder, Fehlermeldungen, Fokussteuerung und Statusmeldungen, versendet aber keine Daten.</p>
+
+        <div class="grid two">
+          <form class="card" data-contact-form novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name *</label>
+                <input id="name" name="name" autocomplete="name" aria-describedby="name-error" aria-required="true" required>
+                <p class="field-error" id="name-error" data-error-for="name" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="email">E-Mail *</label>
+                <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error" aria-required="true" required>
+                <p class="field-error" id="email-error" data-error-for="email" aria-live="polite"></p>
+              </div>
+              <div class="field full">
+                <label for="topic">Thema *</label>
+                <select id="topic" name="topic" aria-describedby="topic-error" aria-required="true" required>
+                  <option value="">Bitte wÃ¤hlen</option>
+                  <option>Barrierefreiheit bei einem Event</option>
+                  <option>Ticketbestellung</option>
+                  <option>Veranstalterkonto</option>
+                  <option>Datenschutz</option>
+                  <option>Sonstiges</option>
+                </select>
+                <p class="field-error" id="topic-error" data-error-for="topic" aria-live="polite"></p>
+              </div>
+              <div class="field full">
+                <label for="message">Nachricht *</label>
+                <textarea id="message" name="message" aria-describedby="message-error" aria-required="true" required></textarea>
+                <p class="field-error" id="message-error" data-error-for="message" aria-live="polite"></p>
+              </div>
+            </div>
+            <button class="button" type="submit">Nachricht prÃ¼fen</button>
+            <p class="status" role="status" aria-live="polite" data-form-status></p>
+          </form>
+
+          <aside class="notice" aria-labelledby="contact-data">
+            <h2 id="contact-data">Kontakt- und Firmendaten</h2>
+            <p>Eventa Access GmbH<br>Museumsplatz 12<br>1070 Wien<br>Ã–sterreich</p>
+            <p><strong>E-Mail:</strong> <a href="mailto:hello@eventa.example">hello@eventa.example</a></p>
+            <p><strong>Barrierefreiheit:</strong> <a href="mailto:access@eventa.example">access@eventa.example</a></p>
+            <p class="hint">Bitte keine echten Gesundheitsdaten in dieses Projektformular eintragen.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>Eventa Access GmbH, Wien. Fiktives studentisches Ticketshop-Projekt fÃ¼r Daten- und Informatikrecht.</p>
+      <div class="footer-links" aria-label="Rechtliche Seiten">
+        <a href="projektplan.html">Projektplan</a>
+        <a href="accessibility.html">Barrierefreiheit</a>
+        <a href="copyright.html">Urheberrecht</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+    </div>
+  </footer>
+  <aside class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" data-cookie-banner>
+    <h2 id="cookie-title">Cookie-Auswahl</h2>
+    <p id="cookie-text">Diese Projektseite nutzt notwendige lokale Speicherung fÃ¼r den Cookie-Hinweis. Analyse-Cookies sind nur gemockt.</p>
+    <div class="cookie-actions"><button class="button" type="button" data-cookie-choice="notwendig">Nur notwendige</button><button class="button secondary" type="button" data-cookie-choice="analyse-mock">Analyse-Mock erlauben</button></div>
+    <p class="status" role="status" aria-live="polite" data-cookie-status></p>
+  </aside>
+</body>
+</html>
+
