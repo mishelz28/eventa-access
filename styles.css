@@ -904,8 +904,8 @@ textarea {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(220px, 0.75fr) minmax(640px, 1.5fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
   align-items: start;
 }
 
@@ -916,8 +916,8 @@ textarea {
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem 0.85rem;
-  justify-content: end;
+  gap: 0.65rem 1.25rem;
+  justify-content: start;
 }
 
 .cookie-banner {
