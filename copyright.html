@@ -1,87 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Urheberrecht und Mediendokumentation für die Eventa Access Projektwebsite." />
   <title>Urheberrecht | Eventa Access</title>
-  <meta name="description" content="Medien- und Urheberrechtsdokumentation für Eventa Access.">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="main.js" defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f9f8f6; --text: #1a1a1a; --muted: #555; --accent: #2d6a4f;
+      --accent-light: #e8f4f0; --border: #ddd; --card: #fff; --radius: 10px;
+    }
+    body { font-family: 'Atkinson Hyperlegible', Aptos, 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem; }
+    a { color: var(--accent); }
+    a:hover { text-decoration: underline; }
+    .skip-link { position: absolute; left: -9999px; top: 0; background: var(--accent); color: #fff; padding: 8px 16px; border-radius: 0 0 6px 6px; z-index: 999; }
+    .skip-link:focus { left: 16px; }
+    header { background: #fff; border-bottom: 1px solid var(--border); }
+    nav { max-width: 1100px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+    .nav-brand { font-weight: 700; font-size: 1.15rem; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .nav-brand svg { width: 28px; height: 28px; fill: var(--accent); flex-shrink: 0; }
+    nav ul { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; margin-left: auto; }
+    nav ul a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+    nav ul a:hover { color: var(--accent); }
+    main { max-width: 820px; margin: 0 auto; padding: 48px 24px 80px; }
+    .badge { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 0.04em; text-transform: uppercase; }
+    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; line-height: 1.25; }
+    .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 40px; }
+    h2 { font-size: 1.25rem; font-weight: 700; margin: 36px 0 12px; border-left: 4px solid var(--accent); padding-left: 12px; }
+    p { margin-bottom: 14px; color: #2a2a2a; }
+    ul { margin: 0 0 16px 20px; }
+    li { margin-bottom: 6px; color: #2a2a2a; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 24px; }
+    /* Media table */
+    .media-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 0.91rem; }
+    .media-table th, .media-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .media-table th { background: var(--accent-light); font-weight: 600; }
+    .media-table tr:last-child td { border-bottom: none; }
+    .tag { display: inline-block; background: #e8f4f0; color: #2d6a4f; font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+    footer { background: #1a1a1a; color: #ccc; padding: 32px 24px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .footer-links a { color: #aaa; font-size: 0.85rem; text-decoration: none; }
+    .footer-links a:hover { color: #fff; }
+    .footer-note { font-size: 0.8rem; color: #777; }
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Zum Inhalt springen</a>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Eventa Access Startseite"><img src="brand-symbol.svg" alt="" width="42" height="42"><span>Eventa Access</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span><span class="sr-only">Navigation öffnen</span></button>
-      <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation" data-nav>
-        <ul>
-          <li><a href="index.html">Start</a></li>
-          <li><a href="features.html">Funktionen</a></li>
-          <li><a href="about.html">Projekt</a></li>
-          <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+  <header>
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html" class="nav-brand" aria-label="Eventa Access – Startseite">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18"/><path d="M12 20h16M20 12v16" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+        Eventa Access
+      </a>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="features.html">Funktionen</a></li>
+        <li><a href="about.html">Projekt</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="main">
-    <section class="section">
-      <div class="container">
-        <p class="eyebrow">Aufgabe 2</p>
-        <h1>Urheberrecht und Medien</h1>
-        <p class="lead">Auf dieser Seite steht, welche Medien in der Website vorkommen und woher sie kommen. Für das Projekt wurden keine fremden Fotos, Musikdateien oder Logos eingebaut.</p>
+    <span class="badge">Aufgabe 2</span>
+    <h1>Urheberrecht und Medien</h1>
+    <p class="lead">
+      Auf dieser Seite dokumentiere ich, welche Medien ich auf der Website verwendet habe, woher sie stammen und welche Rechte daran bestehen. Für das Projekt habe ich bewusst darauf geachtet, nur selbst erstellte oder vollständig lizenzfreie Materialien zu verwenden, damit die Urheberrechtssituation klar und einfach bleibt.
+    </p>
 
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th scope="col">Medium</th><th scope="col">Datei oder Quelle</th><th scope="col">Rechte / Lizenz</th><th scope="col">Nutzung</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Hero-Grafik</td><td>concert-night-hero.png</td><td>Für dieses Projekt mit einem Bildgenerator erstellt; keine echten Logos oder erkennbaren realen Personen.</td><td>Hintergrundbild der Startseite.</td></tr>
-              <tr><td>Bildmarke</td><td>brand-symbol.svg</td><td>Selbst erstellt.</td><td>Logo und Favicon.</td></tr>
-              <tr><td>Dashboard-Illustration</td><td>product-dashboard.svg</td><td>Selbst erstellt.</td><td>Erklärt Saalplan, Untertitelhinweis und Paketanfrage.</td></tr>
-              <tr><td>Ablaufgrafik</td><td>demo-animation.svg</td><td>Selbst erstellt.</td><td>Zeigt den barrierearmen Ablauf.</td></tr>
-              <tr><td>Hörmarke / Sound</td><td>Web Audio API in main.js, keine externe Sounddatei</td><td>Vier kurze Töne selbst erzeugt; keine fremden Musik- oder Sounddateien.</td><td>Akustische Markenform auf der About-us-Seite.</td></tr>
-              <tr><td>Schrift</td><td>Lokaler CSS-Font-Stack mit Atkinson Hyperlegible, Aptos und Segoe UI als bevorzugten Schriften</td><td>Keine externe Webfont-Datei eingebunden.</td><td>Lesbare Darstellung der gesamten Website.</td></tr>
-              <tr><td>Texte</td><td>Alle HTML-Seitentexte</td><td>Für dieses Unterrichtsprojekt geschrieben.</td><td>Produkt-, Rechts- und Barrierefreiheitsinformationen.</td></tr>
-              <tr><td>Code</td><td>HTML, CSS, JavaScript</td><td>Für dieses Projekt erstellt und angepasst.</td><td>Navigation, Paketauswahl, Cookie-Hinweis, Formularvalidierung und Sound-Demo.</td></tr>
-            </tbody>
-          </table>
-        </div>
+    <h2>Übersicht aller verwendeten Medien</h2>
+    <p>Die Tabelle zeigt alle Medienarten, die auf der Website vorkommen:</p>
 
-        <div class="notice" aria-labelledby="ai-title">
-          <h2 id="ai-title">Hinweis zur Startgrafik</h2>
-          <p>Die Startgrafik wurde nur für diese Übung erzeugt. Vorgabe war eine Konzertnacht mit Bühne, Feuerwerk und Hinweisen auf Barrierefreiheit, aber ohne Logos, Wasserzeichen oder lesbaren Fremdtext.</p>
-          <p>Bei einer echten kommerziellen Website müsste man Bildrechte, Personenrechte und Kennzeichnungspflichten noch einmal genauer prüfen.</p>
-        </div>
+    <table class="media-table" aria-label="Medienübersicht mit Lizenzinformationen">
+      <thead>
+        <tr>
+          <th>Medium / Datei</th>
+          <th>Typ</th>
+          <th>Herkunft &amp; Lizenz</th>
+          <th>Verwendungszweck</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>concert-night-hero.png</code></td>
+          <td><span class="tag">Bild</span></td>
+          <td>Mit einem KI-Bildgenerator erstellt (kein echtes Foto, keine erkennbaren Personen oder Logos). Rechte liegen beim Projekt.</td>
+          <td>Hintergrundbild der Startseite (dekorativ)</td>
+        </tr>
+        <tr>
+          <td><code>brand-symbol.svg</code></td>
+          <td><span class="tag">Grafik / Logo</span></td>
+          <td>Selbst erstellt in Inkscape. Vollständig im Besitz des Projekts.</td>
+          <td>Logo in Navigation und Favicon</td>
+        </tr>
+        <tr>
+          <td><code>product-dashboard.svg</code></td>
+          <td><span class="tag">Grafik / Illustration</span></td>
+          <td>Selbst erstellt. Zeigt schematisch die Plattformfunktionen.</td>
+          <td>Erklärt Saalplan, Untertitelhinweis und Paketanfrage</td>
+        </tr>
+        <tr>
+          <td><code>demo-animation.svg</code></td>
+          <td><span class="tag">Animation / Grafik</span></td>
+          <td>Selbst erstellt als SVG-Animation (CSS-basiert, kein Video).</td>
+          <td>Veranschaulicht den barrierearmen Buchungsablauf</td>
+        </tr>
+        <tr>
+          <td>Hörmarke (Tonfolge)</td>
+          <td><span class="tag">Sound / Audio</span></td>
+          <td>Vier kurze Töne, vollständig mit der Web Audio API in JavaScript erzeugt. Keine externe Sounddatei eingebunden.</td>
+          <td>Akustische Markenform auf der About-us-Seite</td>
+        </tr>
+        <tr>
+          <td>Schriftart (CSS Font Stack)</td>
+          <td><span class="tag">Schrift</span></td>
+          <td>Bevorzugte Schriften: Atkinson Hyperlegible (Open Font License 1.1), Aptos und Segoe UI (Systemschriften). Keine externe Webfont-Datei geladen.</td>
+          <td>Lesbare Darstellung der gesamten Website</td>
+        </tr>
+        <tr>
+          <td>Alle Seitentexte (HTML)</td>
+          <td><span class="tag">Text</span></td>
+          <td>Eigens für dieses Unterrichtsprojekt verfasst. Urheberrecht liegt beim Projekt.</td>
+          <td>Produkt-, Rechts- und Barrierefreiheitsinhalte</td>
+        </tr>
+        <tr>
+          <td>Code (HTML, CSS, JS)</td>
+          <td><span class="tag">Quellcode</span></td>
+          <td>Selbst geschrieben und angepasst. Keine Drittbibliotheken eingebunden.</td>
+          <td>Navigation, Paketauswahl, Cookie-Hinweis, Formularvalidierung, Sound-Demo</td>
+        </tr>
+      </tbody>
+    </table>
 
-        <h2>Keine ungeprüften Drittmedien</h2>
-        <p>Die Website lädt keine fremden Fotos, Icons, Videos, Karten, Webfonts oder Tracking-Skripte. Dadurch bleibt für die Abgabe klar, welche Medien verwendet wurden.</p>
-      </div>
-    </section>
+    <h2>Zur KI-generierten Startgrafik</h2>
+    <p>
+      Das Hintergrundbild wurde ausschließlich für diese Übung mit einem KI-Bildgenerator erstellt. Die Vorgabe war eine Konzertnacht mit Bühne und Publikum, ohne erkennbare Logos, Wasserzeichen, lesbare Texte oder reale Personen. Es handelt sich also nicht um ein Foto, das Persönlichkeits- oder Fotorechte berühren würde.
+    </p>
+    <p>
+      <strong>Wichtiger Hinweis für eine echte kommerzielle Website:</strong> Bei KI-generierten Bildern ist die Rechtslage noch nicht abschließend geklärt – insbesondere die Frage, ob und wem das Urheberrecht zusteht. Für ein echtes Produkt würde ich hier auf lizenzierte Stockfotos (z.&nbsp;B. Unsplash, Wikimedia Commons) oder eigens erstellte Fotografien setzen.
+    </p>
+
+    <h2>Zur Schriftart: Atkinson Hyperlegible</h2>
+    <p>
+      Atkinson Hyperlegible ist eine Schrift, die speziell für bessere Lesbarkeit für Menschen mit Sehbehinderung entwickelt wurde. Sie wird von der Braille Institute und Google Fonts kostenlos unter der Open Font License (OFL 1.1) bereitgestellt, die eine freie Verwendung auch in Projekten erlaubt.
+    </p>
+    <p>
+      Da auf dieser Website keine externe Webfont-Datei per <code>@import</code> oder Google Fonts API eingebunden ist, entsteht auch kein Datenschutzproblem durch das Laden von Ressourcen externer Anbieter. Die Schrift wird nur genutzt, wenn sie lokal installiert ist – ansonsten greift der Browser auf Aptos oder Segoe UI zurück.
+    </p>
+
+    <h2>Warum keine Drittmedien?</h2>
+    <p>
+      Ich habe bewusst darauf verzichtet, externe Fotos, Icons, Videos, Musikdateien, Karten oder Tracking-Skripte einzubinden. Das hat zwei Vorteile:
+    </p>
+    <ul>
+      <li>Die Urheberrechtssituation ist eindeutig und leicht zu dokumentieren.</li>
+      <li>Es entstehen keine Datenschutzprobleme durch externe Anfragen (z.&nbsp;B. an Google, CDNs oder Bilddienste).</li>
+    </ul>
+    <p>
+      Für ein echtes Produkt würde man natürlich auf mehr Medienarten setzen. Wichtig wäre dann, für jedes Medium die Lizenz zu prüfen (CC0, CC BY, Royalty-Free usw.) und die Quellenangaben sauber zu dokumentieren – genau so, wie auf dieser Seite beschrieben.
+    </p>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>Eventa Access GmbH, Wien. Fiktives studentisches Unternehmenswebsite-Projekt für Daten- und Informatikrecht.</p>
-      <div class="footer-links" aria-label="Rechtliche Seiten">
+  <footer>
+    <div class="footer-inner">
+      <nav class="footer-links" aria-label="Rechtliche Seiten">
         <a href="projektplan.html">Projektplan</a>
         <a href="accessibility.html">Barrierefreiheit</a>
         <a href="copyright.html">Urheberrecht</a>
         <a href="license.html">Lizenz</a>
         <a href="privacy.html">Datenschutz</a>
         <a href="impressum.html">Impressum</a>
-      </div>
+      </nav>
+      <p class="footer-note">Eventa Access GmbH, Wien · Fiktives studentisches Projekt für Daten- und Informatikrecht</p>
     </div>
   </footer>
-  <aside class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" data-cookie-banner>
-    <h2 id="cookie-title">Cookie-Auswahl</h2>
-    <p id="cookie-text">Diese Projektseite nutzt notwendige lokale Speicherung für den Cookie-Hinweis. Analyse-Cookies sind nur gemockt.</p>
-    <div class="cookie-actions"><button class="button" type="button" data-cookie-choice="notwendig">Nur notwendige</button><button class="button secondary" type="button" data-cookie-choice="analyse-mock">Analyse-Mock erlauben</button></div>
-    <p class="status" role="status" aria-live="polite" data-cookie-status></p>
-  </aside>
 </body>
 </html>
-

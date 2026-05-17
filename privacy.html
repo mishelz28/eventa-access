@@ -1,106 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Datenschutzerklärung für die fiktive Eventa Access Webshop-Demo." />
   <title>Datenschutz | Eventa Access</title>
-  <meta name="description" content="Datenschutzerklärung für die fiktive Eventa Access Plattform.">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="main.js" defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f9f8f6; --text: #1a1a1a; --muted: #555; --accent: #2d6a4f;
+      --accent-light: #e8f4f0; --border: #ddd; --card: #fff; --radius: 10px;
+      --warn: #fff8e6; --warn-border: #f0c040;
+    }
+    body { font-family: 'Atkinson Hyperlegible', Aptos, 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem; }
+    a { color: var(--accent); }
+    a:hover { text-decoration: underline; }
+    .skip-link { position: absolute; left: -9999px; top: 0; background: var(--accent); color: #fff; padding: 8px 16px; border-radius: 0 0 6px 6px; z-index: 999; }
+    .skip-link:focus { left: 16px; }
+    header { background: #fff; border-bottom: 1px solid var(--border); }
+    nav { max-width: 1100px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+    .nav-brand { font-weight: 700; font-size: 1.15rem; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .nav-brand svg { width: 28px; height: 28px; fill: var(--accent); flex-shrink: 0; }
+    nav ul { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; margin-left: auto; }
+    nav ul a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+    nav ul a:hover { color: var(--accent); }
+    main { max-width: 820px; margin: 0 auto; padding: 48px 24px 80px; }
+    .badge { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 0.04em; text-transform: uppercase; }
+    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; line-height: 1.25; }
+    .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 40px; }
+    h2 { font-size: 1.25rem; font-weight: 700; margin: 36px 0 12px; border-left: 4px solid var(--accent); padding-left: 12px; }
+    h3 { font-size: 1.05rem; font-weight: 700; margin: 20px 0 8px; }
+    p { margin-bottom: 14px; color: #2a2a2a; }
+    ul { margin: 0 0 16px 20px; }
+    li { margin-bottom: 6px; color: #2a2a2a; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 24px; }
+    .notice { background: var(--warn); border: 1px solid var(--warn-border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 28px; font-size: 0.95rem; }
+    /* Data table */
+    .data-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 0.91rem; }
+    .data-table th, .data-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .data-table th { background: var(--accent-light); font-weight: 600; }
+    .data-table tr:last-child td { border-bottom: none; }
+    footer { background: #1a1a1a; color: #ccc; padding: 32px 24px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .footer-links a { color: #aaa; font-size: 0.85rem; text-decoration: none; }
+    .footer-links a:hover { color: #fff; }
+    .footer-note { font-size: 0.8rem; color: #777; }
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Zum Inhalt springen</a>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Eventa Access Startseite"><img src="brand-symbol.svg" alt="" width="42" height="42"><span>Eventa Access</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span><span class="sr-only">Navigation öffnen</span></button>
-      <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation" data-nav>
-        <ul>
-          <li><a href="index.html">Start</a></li>
-          <li><a href="features.html">Funktionen</a></li>
-          <li><a href="about.html">Projekt</a></li>
-          <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+  <header>
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html" class="nav-brand" aria-label="Eventa Access – Startseite">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18"/><path d="M12 20h16M20 12v16" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+        Eventa Access
+      </a>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="features.html">Funktionen</a></li>
+        <li><a href="about.html">Projekt</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="main">
-    <section class="section">
-      <div class="container narrow">
-        <p class="eyebrow">Aufgabe 5</p>
-        <h1>Datenschutzerklärung</h1>
-        <p class="lead">Diese Datenschutzerklärung gehört zu einem fiktiven Unterrichtsprojekt. Auf dieser Website werden keine echten Bestellungen, Zahlungen oder Kontaktanfragen an einen Server gesendet.</p>
+    <span class="badge">Aufgabe 5</span>
+    <h1>Datenschutzerklärung</h1>
+    <p class="lead">
+      Diese Datenschutzerklärung gehört zum Unterrichtsprojekt Eventa Access. Sie beschreibt, wie eine Datenschutzerklärung für einen Webshop dieser Art aussehen müsste – auch wenn auf dieser Demo-Website keine echten Daten an einen Server übermittelt werden.
+    </p>
 
-        <div class="notice">
-          <h2>Wer wäre verantwortlich?</h2>
-          <p>Eventa Access GmbH, Museumsplatz 12, 1070 Wien, Österreich. E-Mail: <a href="mailto:privacy@eventa.example">privacy@eventa.example</a>.</p>
-        </div>
+    <div class="notice">
+      <strong>Hinweis zum Projektstatus:</strong> Das ist ein studentisches Demo-Projekt. Keine Formulardaten werden an einen Server gesendet, keine Zahlungen werden verarbeitet, und es werden keine echten personenbezogenen Daten gespeichert. Der Analyse-Cookie ist nur ein Mock-up ohne echte Funktion.
+    </div>
 
-        <h2>Welche Daten im echten Betrieb wichtig wären</h2>
-        <ul class="check-list">
-          <li>Name und E-Mail-Adresse für Bestellung, Support oder Kontaktformular.</li>
-          <li>Daten zum gewählten Paket, Preis und zu gebuchten Funktionen.</li>
-          <li>Zahlungsdaten über einen externen Zahlungsdienst. In diesem Projekt passiert das nur als Mock-up.</li>
-          <li>Freiwillige Zugangshinweise, zum Beispiel Rollstuhlplatz oder Begleitperson. Solche Angaben wären besonders sensibel.</li>
-          <li>Cookie-Auswahl und lokale Speicherung, damit der Hinweis nicht immer wieder erscheint.</li>
-        </ul>
+    <h2>1. Wer ist verantwortlich?</h2>
+    <p>
+      Verantwortliche im Sinne der DSGVO wäre im echten Betrieb:<br />
+      <strong>Eventa Access GmbH</strong><br />
+      Museumsplatz 12, 1070 Wien, Österreich<br />
+      E-Mail: <a href="mailto:privacy@eventa.example">privacy@eventa.example</a>
+    </p>
+    <p>
+      Da es sich um ein Studienprojekt handelt, ist diese Adresse fiktiv. Bei Fragen zum Datenschutz kann man mich über die <a href="contact.html">Kontaktseite</a> erreichen.
+    </p>
 
-        <h2>Warum diese Daten gebraucht würden</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th scope="col">Zweck</th><th scope="col">Daten</th><th scope="col">Einfache Rechtsgrundlage</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Paketkauf</td><td>Name, E-Mail, Paket, Preis</td><td>Damit der Vertrag erfüllt werden kann.</td></tr>
-              <tr><td>Kontaktformular</td><td>Name, E-Mail, Nachricht</td><td>Damit auf die Anfrage geantwortet werden kann.</td></tr>
-              <tr><td>Zugangshinweise</td><td>Freiwillige Angaben zur Barrierefreiheit</td><td>Nur mit Einwilligung und nur für diesen Zweck.</td></tr>
-              <tr><td>Cookie-Auswahl</td><td>Lokaler Consent-Wert</td><td>Damit die Auswahl gespeichert bleibt.</td></tr>
-              <tr><td>Analyse-Mock</td><td>Nur Demo-Status, keine echte Analyse</td><td>Im echten Betrieb nur mit Einwilligung.</td></tr>
-            </tbody>
-          </table>
-        </div>
+    <h2>2. Welche Daten werden verarbeitet?</h2>
+    <p>Im echten Betrieb eines Webshops wie Eventa Access würden folgende Daten anfallen:</p>
 
-        <h2>Speicherdauer</h2>
-        <p>In diesem Projekt wird nichts an einen Server geschickt. In einem echten Webshop würden Bestell- und Rechnungsdaten nur so lange gespeichert, wie es für Vertrag, Buchhaltung und gesetzliche Pflichten nötig ist.</p>
+    <table class="data-table" aria-label="Übersicht der Datenverarbeitungen">
+      <thead>
+        <tr>
+          <th>Prozess</th>
+          <th>Betroffene Daten</th>
+          <th>Rechtsgrundlage (DSGVO)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paketanfrage / Bestellung</td>
+          <td>Name, E-Mail-Adresse, gewähltes Paket, Preis</td>
+          <td>Art. 6 Abs. 1 lit. b – Vertragserfüllung</td>
+        </tr>
+        <tr>
+          <td>Kontaktformular</td>
+          <td>Name, E-Mail-Adresse, Nachrichteninhalt</td>
+          <td>Art. 6 Abs. 1 lit. f – Berechtigtes Interesse an der Kommunikation</td>
+        </tr>
+        <tr>
+          <td>Freiwillige Zugangshinweise</td>
+          <td>Angaben zu Rollstuhlbedarf, Begleitperson, etc.</td>
+          <td>Art. 9 Abs. 2 lit. a – Ausdrückliche Einwilligung (besondere Datenkategorie)</td>
+        </tr>
+        <tr>
+          <td>Cookie-Auswahl</td>
+          <td>Gespeicherter Zustimmungswert (localStorage)</td>
+          <td>Art. 6 Abs. 1 lit. c – Gesetzliche Pflicht (ePrivacy)</td>
+        </tr>
+        <tr>
+          <td>Analyse-Mock (Demo)</td>
+          <td>Kein echter Datenzugriff; nur Demo-Anzeige</td>
+          <td>Im echten Betrieb: Art. 6 Abs. 1 lit. a – Einwilligung erforderlich</td>
+        </tr>
+      </tbody>
+    </table>
 
-        <h2>Betroffenenrechte</h2>
-        <ul class="check-list">
-          <li>Nachfragen, welche personenbezogenen Daten gespeichert sind.</li>
-          <li>Falsche Daten berichtigen lassen.</li>
-          <li>Daten löschen oder einschränken lassen, wenn keine Pflicht zur Aufbewahrung besteht.</li>
-          <li>Daten in einem passenden Format erhalten.</li>
-          <li>Bestimmten Verarbeitungen widersprechen.</li>
-          <li>Sich bei einer Datenschutzaufsichtsbehörde beschweren.</li>
-        </ul>
+    <h2>3. Cookies und lokale Speicherung</h2>
+    <p>
+      Diese Website speichert genau einen Wert im lokalen Speicher des Browsers: die Cookie-Auswahl des Nutzers (ob nur notwendige Cookies akzeptiert wurden oder auch das Analyse-Mock). Dieser Wert bleibt lokal im Browser – er wird nicht an einen Server übertragen.
+    </p>
+    <p>
+      Es werden keine Tracking-Cookies eingesetzt. Keine Inhalte von Google Analytics, Facebook Pixel, Hotjar oder vergleichbaren Diensten werden geladen. Der Analyse-Mock auf dieser Demo-Seite ist rein visuell und erfasst keine echten Daten.
+    </p>
 
-        <h2>Sicherheit und Datenminimierung</h2>
-        <p>Die Musterseite fragt nur wenige Daten ab, zeigt Pflichtfelder klar an und nutzt keine echten Zahlungs- oder Trackingfunktionen. Freiwillige Angaben zu Zugang oder Assistenz dürften in einem echten System nicht für Werbung oder Profiling verwendet werden.</p>
-      </div>
-    </section>
+    <h2>4. Besonderheit: Zugangshinweise als sensible Daten</h2>
+    <p>
+      Eine Besonderheit dieser Plattform ist, dass Nutzerinnen und Nutzer freiwillig Angaben zu ihrer Barrierefreiheitssituation machen können – zum Beispiel ob sie einen Rollstuhlplatz brauchen oder eine Begleitperson mitbringen. Solche Angaben fallen unter die besonderen Kategorien personenbezogener Daten nach Art. 9 DSGVO (Gesundheitsdaten).
+    </p>
+    <p>
+      Im echten Betrieb würde das bedeuten: Diese Daten dürfen nur mit ausdrücklicher Einwilligung erhoben werden, dürfen nicht für Werbung oder Profiling genutzt werden, und müssen besonders sicher gespeichert sein. Auf der Demo-Website werden solche Daten gar nicht gespeichert.
+    </p>
+
+    <h2>5. Speicherdauer</h2>
+    <p>
+      Da keine echten Daten verarbeitet werden, gibt es hier keine Speicherdauer. In einem echten Webshop würden gelten:
+    </p>
+    <ul>
+      <li>Bestelldaten: 7 Jahre (österreichische Buchführungspflicht nach BAO)</li>
+      <li>Kontaktanfragen: bis zur Erledigung, danach 3 Jahre (gesetzliche Verjährungsfrist)</li>
+      <li>Freiwillige Zugangshinweise: nur für die Dauer des Events, danach sofort löschen</li>
+      <li>Cookie-Auswahl: bis zum Widerruf oder Browser-Löschung</li>
+    </ul>
+
+    <h2>6. Deine Rechte</h2>
+    <p>Betroffene Personen haben nach DSGVO folgende Rechte:</p>
+    <ul>
+      <li><strong>Auskunft (Art. 15):</strong> Welche Daten werden über mich gespeichert?</li>
+      <li><strong>Berichtigung (Art. 16):</strong> Falsche Daten korrigieren lassen.</li>
+      <li><strong>Löschung (Art. 17):</strong> Daten löschen lassen, wenn kein Aufbewahrungsgrund besteht.</li>
+      <li><strong>Einschränkung (Art. 18):</strong> Verarbeitung vorübergehend einschränken.</li>
+      <li><strong>Datenübertragbarkeit (Art. 20):</strong> Daten in einem maschinenlesbaren Format erhalten.</li>
+      <li><strong>Widerspruch (Art. 21):</strong> Verarbeitung auf Basis berechtigter Interessen widersprechen.</li>
+      <li><strong>Beschwerde:</strong> Bei der österreichischen Datenschutzbehörde (<a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a>) Beschwerde einlegen.</li>
+    </ul>
+
+    <h2>7. Externe Dienste und Drittanbieter</h2>
+    <p>
+      Diese Website lädt keine externen Skripte, Fonts oder Medien von Drittanbietern. Es werden keine Daten an Google, Meta, Amazon oder vergleichbare Dienste übertragen. Hosting erfolgt über GitHub Pages; dabei können Server-Logdaten anfallen (IP-Adresse, Zugriffszeit, aufgerufene Seite) – diese werden von GitHub verarbeitet und unterliegen deren Datenschutzerklärung.
+    </p>
+
+    <h2>8. Änderungen dieser Erklärung</h2>
+    <p>
+      Da es sich um ein Studienprojekt handelt, wird diese Erklärung nicht regelmäßig aktualisiert. In einem echten Betrieb müsste bei wesentlichen Änderungen (neue Dienste, neue Verarbeitungszwecke) die Datenschutzerklärung angepasst und die Nutzer informiert werden.
+    </p>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>Eventa Access GmbH, Wien. Fiktives studentisches Unternehmenswebsite-Projekt für Daten- und Informatikrecht.</p>
-      <div class="footer-links" aria-label="Rechtliche Seiten">
+  <footer>
+    <div class="footer-inner">
+      <nav class="footer-links" aria-label="Rechtliche Seiten">
         <a href="projektplan.html">Projektplan</a>
         <a href="accessibility.html">Barrierefreiheit</a>
         <a href="copyright.html">Urheberrecht</a>
         <a href="license.html">Lizenz</a>
         <a href="privacy.html">Datenschutz</a>
         <a href="impressum.html">Impressum</a>
-      </div>
+      </nav>
+      <p class="footer-note">Eventa Access GmbH, Wien · Fiktives studentisches Projekt für Daten- und Informatikrecht</p>
     </div>
   </footer>
-  <aside class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" data-cookie-banner>
-    <h2 id="cookie-title">Cookie-Auswahl</h2>
-    <p id="cookie-text">Diese Projektseite nutzt notwendige lokale Speicherung für den Cookie-Hinweis. Analyse-Cookies sind nur gemockt.</p>
-    <div class="cookie-actions"><button class="button" type="button" data-cookie-choice="notwendig">Nur notwendige</button><button class="button secondary" type="button" data-cookie-choice="analyse-mock">Analyse-Mock erlauben</button></div>
-    <p class="status" role="status" aria-live="polite" data-cookie-status></p>
-  </aside>
 </body>
 </html>
-
