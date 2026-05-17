@@ -2,22 +2,59 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Lizenz- und Nutzungsbedingungen für die fiktive Eventa Access Plattform." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Lizenz- und Nutzungsbedingungen für die fiktive Eventa Access Plattform." />
   <title>Lizenz | Eventa Access</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f9f8f6; --text: #1a1a1a; --muted: #555; --accent: #2d6a4f;
+      --accent-light: #e8f4f0; --border: #ddd; --card: #fff; --radius: 10px;
+      --warn: #fff8e6; --warn-border: #f0c040;
+      --deny: #fef2f2; --deny-border: #fca5a5;
+    }
+    body { font-family: 'Atkinson Hyperlegible', Aptos, 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem; }
+    a { color: var(--accent); }
+    a:hover { text-decoration: underline; }
+    .skip-link { position: absolute; left: -9999px; top: 0; background: var(--accent); color: #fff; padding: 8px 16px; border-radius: 0 0 6px 6px; z-index: 999; }
+    .skip-link:focus { left: 16px; }
+    header { background: #fff; border-bottom: 1px solid var(--border); }
+    nav { max-width: 1100px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+    .nav-brand { font-weight: 700; font-size: 1.15rem; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .nav-brand svg { width: 28px; height: 28px; fill: var(--accent); flex-shrink: 0; }
+    nav ul { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; margin-left: auto; }
+    nav ul a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+    nav ul a:hover { color: var(--accent); }
+    main { max-width: 820px; margin: 0 auto; padding: 48px 24px 80px; }
+    .badge { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 0.04em; text-transform: uppercase; }
+    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; line-height: 1.25; }
+    .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 40px; }
+    h2 { font-size: 1.25rem; font-weight: 700; margin: 36px 0 12px; border-left: 4px solid var(--accent); padding-left: 12px; }
+    p { margin-bottom: 14px; color: #2a2a2a; }
+    ul { margin: 0 0 16px 20px; }
+    li { margin-bottom: 6px; color: #2a2a2a; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 24px; }
+    .card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; color: var(--accent); }
+    .notice { background: var(--warn); border: 1px solid var(--warn-border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 28px; font-size: 0.95rem; }
+    .deny-box { background: var(--deny); border: 1px solid var(--deny-border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 24px; }
+    .deny-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; color: #b91c1c; }
+    footer { background: #1a1a1a; color: #ccc; padding: 32px 24px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .footer-links a { color: #aaa; font-size: 0.85rem; text-decoration: none; }
+    .footer-links a:hover { color: #fff; }
+    .footer-note { font-size: 0.8rem; color: #777; }
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Zum Inhalt springen</a>
-
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
   <header>
     <nav aria-label="Hauptnavigation">
-      <a href="index.html" class="nav-brand">
-        <img src="brand-symbol.svg" alt="" width="32" height="32" aria-hidden="true" />
+      <a href="index.html" class="nav-brand" aria-label="Eventa Access – Startseite">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18"/><path d="M12 20h16M20 12v16" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
         Eventa Access
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Navigation öffnen</button>
-      <ul id="nav-list">
+      <ul>
         <li><a href="index.html">Start</a></li>
         <li><a href="features.html">Funktionen</a></li>
         <li><a href="about.html">Projekt</a></li>
@@ -27,105 +64,93 @@
   </header>
 
   <main id="main">
-    <p class="page-label">Aufgabe 4</p>
-
-    <h1>Lizenz und Nutzung</h1>
-
-    <p>
-      Diese Seite beschreibt, welche Rechte durch den Kauf eines Eventa Access Pakets erworben werden, welche Rechte beim Unternehmen verbleiben und wie die Haftung geregelt ist. Die Texte sind bewusst einfach gehalten – nicht als fertige Rechtsvorlage, sondern als verständliches Muster für die Projektübung.
+    <span class="badge">Aufgabe 4</span>
+    <h1>Lizenz und Nutzungsbedingungen</h1>
+    <p class="lead">
+      Diese Seite beschreibt, welche Rechte durch den Kauf eines Eventa Access Pakets erworben werden, welche Rechte beim Unternehmen verbleiben und welche Einschränkungen es gibt. Der Text ist bewusst einfach formuliert – nicht als juristische Formularvorgabe, sondern als verständliches Muster für die Projektübung.
     </p>
 
-    <h2>Wichtig vorab</h2>
+    <div class="notice">
+      <strong>Hinweis:</strong> Diese Website ist ein Unterrichtsprojekt. Es werden keine echten Verträge abgeschlossen und keine Zahlungen verarbeitet. Die folgenden Texte zeigen beispielhaft, wie eine Lizenzseite für eine SaaS-Plattform aussehen könnte.
+    </div>
 
-    <p>
-      Diese Website ist ein Unterrichtsprojekt. Es werden keine echten Pakete verkauft und es entstehen keine echten Verträge. Die folgenden Texte zeigen beispielhaft, wie eine Lizenzseite für eine SaaS-Plattform strukturiert sein könnte.
-    </p>
+    <h2>Was Nutzerinnen und Nutzer durch den Kauf erwerben</h2>
+    <p>Mit dem Kauf eines Eventa Access Pakets erwirbt man eine einfache, nicht ausschließliche und nicht übertragbare Lizenz zur Nutzung der Plattform. Diese Lizenz umfasst:</p>
 
-    <h2>Was Käuferinnen und Käufer durch den Kauf erwerben</h2>
+    <div class="card">
+      <h3>Nutzungsrecht am Dienst</h3>
+      <ul>
+        <li>Die Plattform im Browser nutzen, für die Dauer des aktiven Abonnements.</li>
+        <li>Die im jeweiligen Paket enthaltenen Funktionen verwenden (Eventverwaltung, Zugangsinformationen, Ticketdarstellung).</li>
+        <li>Eigene Event-, Ticket- und Zugangsdaten eingeben und im eigenen Account speichern.</li>
+        <li>Die Plattform intern für eigene Veranstaltungen einsetzen.</li>
+      </ul>
+    </div>
 
-    <p>
-      Mit dem Kauf eines Eventa Access Pakets erwirbt man eine einfache, nicht ausschließliche und nicht übertragbare Lizenz zur Nutzung der Plattform. Das bedeutet konkret:
-    </p>
+    <div class="card">
+      <h3>Was Veranstalter mit der Plattform tun dürfen</h3>
+      <ul>
+        <li>Eigene Events anlegen, bearbeiten und wieder löschen.</li>
+        <li>Saalpläne, Zugangsinformationen und Veranstaltungsbeschreibungen eintragen.</li>
+        <li>Eigene Medien hochladen – aber nur solche, an denen die notwendigen Rechte vorliegen.</li>
+        <li>Die Plattforminhalte für interne Vorbereitungszwecke speichern.</li>
+      </ul>
+    </div>
 
+    <h2>Welche Rechte bei Eventa Access verbleiben</h2>
+    <p>Durch den Kauf eines Pakets werden keine Eigentumsrechte an der Plattform übertragen. Folgende Rechte verbleiben ausschließlich bei Eventa Access GmbH:</p>
     <ul>
-      <li>Die Plattform im Browser nutzen, für die Dauer des aktiven Abonnements.</li>
-      <li>Die Funktionen des gewählten Pakets verwenden – also Eventverwaltung, Zugangsinformationen und Ticketdarstellung.</li>
-      <li>Eigene Event-, Ticket- und Zugangsinformationen im eigenen Account speichern.</li>
-      <li>Die Plattform intern für die eigene Veranstaltungsplanung einsetzen.</li>
+      <li>Quellcode, Design, Texte und alle selbst erstellten Grafiken und Illustrationen.</li>
+      <li>Der Name „Eventa Access", die Bildmarke (Logo) und die Hörmarke.</li>
+      <li>Die Struktur der Plattform, die Formularlogik und die technische Infrastruktur.</li>
+      <li>Das Recht, die Plattform weiterzuentwickeln, Funktionen zu ändern oder einzustellen.</li>
+      <li>Das Recht, Pakete, Preise und Konditionen mit angemessener Vorankündigungsfrist anzupassen.</li>
     </ul>
 
-    <h2>Was Veranstalter damit machen dürfen</h2>
+    <h2>Was nicht erlaubt ist</h2>
+    <div class="deny-box">
+      <h3>Verbotene Nutzungen</h3>
+      <ul>
+        <li>Die Plattform oder wesentliche Teile davon weiterverkaufen, vermieten oder weiterlizenzieren.</li>
+        <li>Den Quellcode automatisch auslesen, kopieren oder für eigene Produkte nutzen (Scraping, Reverse Engineering).</li>
+        <li>Falsche oder irreführende Angaben zu Barrierefreiheit, Sicherheit oder Einlass machen.</li>
+        <li>Die Marke „Eventa Access" oder das Logo ohne ausdrückliche Genehmigung für eigene Angebote verwenden.</li>
+        <li>Barrierefreiheits-, Datenschutz- oder Urheberrechtshinweise entfernen oder verändern.</li>
+        <li>Medien hochladen, für die keine eigenen Verwertungsrechte bestehen.</li>
+      </ul>
+    </div>
 
-    <ul>
-      <li>Eigene Events anlegen, bearbeiten und löschen.</li>
-      <li>Saalpläne, Zugangsinformationen und eigene Veranstaltungstexte eintragen.</li>
-      <li>Eigene Medien hochladen – aber nur solche, an denen die notwendigen Rechte vorliegen.</li>
-      <li>Musterbuchungen für interne Vorbereitungszwecke nutzen, im Rahmen der Datenschutzerklärung.</li>
-    </ul>
-
-    <h2>Was bei Eventa Access bleibt</h2>
-
+    <h2>Haftungsbeschränkungen</h2>
     <p>
-      Durch den Kauf werden keine Eigentumsrechte an der Plattform übertragen. Folgendes bleibt ausschließlich bei Eventa Access GmbH:
-    </p>
-
-    <ul>
-      <li>Quellcode, Design, Texte und alle selbst erstellten Grafiken.</li>
-      <li>Der Name Eventa Access, die Bildmarke und die Hörmarke.</li>
-      <li>Die Plattformstruktur, die Formularlogik und die technische Infrastruktur.</li>
-      <li>Das Recht, die Plattform weiterzuentwickeln oder Funktionen zu ändern.</li>
-      <li>Das Recht, Pakete und Preise mit angemessener Ankündigung anzupassen.</li>
-    </ul>
-
-    <h2>Nicht erlaubt</h2>
-
-    <ul>
-      <li>Die Plattform oder wesentliche Teile davon weiterverkaufen oder weiterlizenzieren.</li>
-      <li>Den Quellcode automatisch auslesen, kopieren oder für eigene Produkte nutzen (Scraping, Reverse Engineering).</li>
-      <li>Falsche Angaben zu Barrierefreiheit, Sicherheit oder Einlass machen.</li>
-      <li>Die Marke Eventa Access ohne Erlaubnis für eigene Angebote verwenden.</li>
-      <li>Urheberrechts-, Datenschutz- oder Barrierefreiheitshinweise entfernen oder verändern.</li>
-      <li>Medien hochladen, für die keine eigenen Verwertungsrechte bestehen.</li>
-    </ul>
-
-    <h2>Haftungsbeschränkung</h2>
-
-    <p>
-      Eventa Access GmbH haftet nicht für Schäden, die durch falsche Veranstalterangaben entstehen – zum Beispiel, wenn ein Sitzplatz fälschlicherweise als rollstuhlgerecht eingetragen ist. Die inhaltliche Richtigkeit der eingetragenen Zugangsinformationen liegt in der Verantwortung der jeweiligen Veranstalter.
+      Eventa Access GmbH haftet nicht für Schäden, die durch falsche Angaben von Veranstaltern entstehen – zum Beispiel wenn ein Sitzplatz als rollstuhlgerecht angegeben ist, obwohl er das nicht ist. Die inhaltliche Richtigkeit der eingetragenen Zugangsinformationen liegt in der Verantwortung der jeweiligen Veranstalter.
     </p>
     <p>
-      Für indirekte Schäden, entgangene Gewinne oder Datenverluste durch fehlerhafte Nutzung oder automatisiertes Auslesen der Plattform wird keine Haftung übernommen.
+      Für indirekte Schäden, entgangene Gewinne, Datenverluste durch fehlerhafte Nutzung oder durch automatisiertes Auslesen der Plattform wird keine Haftung übernommen.
     </p>
     <p>
-      Für technische Ausfälle (Wartung, Störungen) ist die Haftung auf das gesetzlich unvermeidbare Minimum beschränkt. Geplante Wartungsarbeiten werden mit angemessener Vorankündigung kommuniziert.
+      Eine Haftung für vorübergehende technische Ausfälle (Wartung, Störungen) ist auf das gesetzlich unvermeidbare Minimum beschränkt. Geplante Wartungsarbeiten werden mit angemessener Vorankündigung kommuniziert.
     </p>
     <p>
-      <strong>Ausnahme:</strong> Bei Vorsatz oder grober Fahrlässigkeit gelten die gesetzlichen Haftungsregeln uneingeschränkt. Diese Beschränkungen berühren nicht die gesetzlichen Gewährleistungsrechte der Nutzerinnen und Nutzer.
+      <strong>Ausnahme:</strong> Bei Vorsatz oder grober Fahrlässigkeit gelten die gesetzlichen Haftungsregeln uneingeschränkt. Diese Beschränkungen ändern nichts an gesetzlichen Gewährleistungsrechten der Nutzerinnen und Nutzer.
     </p>
-    <p>
-      Diese Seite ersetzt keine rechtliche Beratung. Für ein echtes Produkt müssten Lizenz- und Haftungsbedingungen von einer juristisch ausgebildeten Person erstellt werden.
-    </p>
+
+    <div class="notice">
+      <strong>Wichtig:</strong> Diese Seite ist kein Ersatz für eine rechtliche Beratung. Die Texte sind als verständliches Muster für die Projektübung gedacht – für ein echtes Produkt müssten Lizenz- und Haftungsbedingungen von einer juristisch ausgebildeten Person erstellt werden.
+    </div>
   </main>
 
   <footer>
-    <p>Eventa Access GmbH, Wien. Fiktives studentisches Unternehmenswebsite-Projekt für Daten- und Informatikrecht.</p>
-    <nav aria-label="Rechtliche Seiten">
-      <a href="projektplan.html">Projektplan</a>
-      <a href="accessibility.html">Barrierefreiheit</a>
-      <a href="copyright.html">Urheberrecht</a>
-      <a href="license.html">Lizenz</a>
-      <a href="privacy.html">Datenschutz</a>
-      <a href="impressum.html">Impressum</a>
-    </nav>
+    <div class="footer-inner">
+      <nav class="footer-links" aria-label="Rechtliche Seiten">
+        <a href="projektplan.html">Projektplan</a>
+        <a href="accessibility.html">Barrierefreiheit</a>
+        <a href="copyright.html">Urheberrecht</a>
+        <a href="license.html">Lizenz</a>
+        <a href="privacy.html">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
+      </nav>
+      <p class="footer-note">Eventa Access GmbH, Wien · Fiktives studentisches Projekt für Daten- und Informatikrecht</p>
+    </div>
   </footer>
-
-  <div id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-modal="true">
-    <h2 id="cookie-title">Cookie-Auswahl</h2>
-    <p>Diese Projektseite nutzt notwendige lokale Speicherung für den Cookie-Hinweis. Analyse-Cookies sind nur gemockt.</p>
-    <button id="cookie-necessary">Nur notwendige</button>
-    <button id="cookie-analytics">Analyse-Mock erlauben</button>
-  </div>
-
-  <script src="main.js"></script>
 </body>
 </html>
