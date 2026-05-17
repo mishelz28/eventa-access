@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
   <title id="title">Barrierearme Eventplattform</title>
-  <desc id="desc">Illustration einer SaaS-Plattform mit Saalplan, Untertitel-Hinweis, Rollstuhlplätzen und Warenkorb.</desc>
+  <desc id="desc">Illustration einer SaaS-Plattform mit Saalplan, Untertitel-Hinweis, Rollstuhlplätzen und Paketanfrage.</desc>
   <rect width="960" height="620" rx="28" fill="#111a24"/>
   <rect x="34" y="34" width="892" height="552" rx="24" fill="#fffdf8"/>
   <rect x="34" y="34" width="892" height="88" rx="24" fill="#21343a"/>
@@ -30,7 +30,7 @@
   <text x="710" y="308" fill="#21343a" font-size="22" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Assistenz</text>
   <text x="710" y="336" fill="#596667" font-size="18" font-family="Aptos, Segoe UI, sans-serif">Begleitung gratis</text>
   <rect x="632" y="382" width="254" height="108" rx="18" fill="#21343a"/>
-  <text x="666" y="427" fill="#fff" font-size="24" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Warenkorb</text>
-  <text x="666" y="464" fill="#f8ddb0" font-size="20" font-family="Aptos, Segoe UI, sans-serif">2 Tickets - EUR 58</text>
+  <text x="666" y="427" fill="#fff" font-size="24" font-family="Aptos, Segoe UI, sans-serif" font-weight="700">Anfrage</text>
+  <text x="666" y="464" fill="#f8ddb0" font-size="20" font-family="Aptos, Segoe UI, sans-serif">Plus Paket - EUR 49</text>
   <path d="M126 186l14-28 14 28 28 14-28 14-14 28-14-28-28-14 28-14zM792 92l9-18 9 18 18 9-18 9-9 18-9-18-18-9 18-9z" fill="#c95f4b"/>
 </svg>

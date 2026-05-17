@@ -41,9 +41,9 @@
     cartList.innerHTML = "";
     if (cart.length === 0) {
       const empty = document.createElement("li");
-      empty.textContent = "Noch kein Ticket ausgewählt.";
+      empty.textContent = "Noch kein Paket ausgewählt.";
       cartList.append(empty);
-      cartTotal.textContent = "EUR 0";
+      cartTotal.textContent = "Kein Paket";
       return;
     }
 
@@ -53,37 +53,26 @@
       const name = document.createElement("span");
       const price = document.createElement("strong");
       name.textContent = item.name;
-      price.textContent = `EUR ${item.price}`;
+      price.textContent = `EUR ${item.price} / Monat`;
       li.append(name, price);
       cartList.append(li);
     });
-    cartTotal.textContent = `EUR ${total}`;
+    cartTotal.textContent = `EUR ${total} / Monat`;
   }
 
   document.querySelectorAll("[data-add-plan]").forEach((button) => {
     button.addEventListener("click", () => {
       cart.length = 0;
       cart.push({
-        name: button.dataset.plan || "Ticket",
+        name: button.dataset.plan || "Paket",
         price: Number(button.dataset.price || 0),
       });
       renderCart();
       if (cartStatus) {
-        cartStatus.textContent = `${button.dataset.plan} wurde in den Muster-Warenkorb gelegt.`;
+        cartStatus.textContent = `${button.dataset.plan} ist für die Anfrage vorgemerkt.`;
       }
     });
   });
-
-  const checkoutButton = document.querySelector("[data-checkout]");
-  if (checkoutButton && cartStatus) {
-    checkoutButton.addEventListener("click", () => {
-      if (cart.length === 0) {
-        cartStatus.textContent = "Bitte zuerst ein Ticket auswählen.";
-        return;
-      }
-      cartStatus.textContent = "Mock-Checkout abgeschlossen. Es wurden keine Zahlungsdaten übertragen.";
-    });
-  }
   renderCart();
 
   const cookieBanner = document.querySelector("[data-cookie-banner]");

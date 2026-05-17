@@ -18,4 +18,4 @@ Die Website soll nicht nur wie ein Demo-Shop aussehen. Entscheidend ist, dass je
 
 ## Lokale Nutzung
 
-`index.html` direkt im Browser öffnen. Ein Backend ist nicht erforderlich; Warenkorb, Checkout, Cookies, Sound-Demo und Kontaktformular sind gemockt.
+`index.html` direkt im Browser öffnen. Ein Backend ist nicht erforderlich; Paketanfrage, Cookies, Sound-Demo und Kontaktformular sind gemockt.
