@@ -1,181 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Projektplan für die Eventa Access Unternehmenswebsite im Fach Daten- und Informatikrecht." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projektplan | Eventa Access</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #f9f8f6;
-      --text: #1a1a1a;
-      --muted: #555;
-      --accent: #2d6a4f;
-      --accent-light: #e8f4f0;
-      --border: #ddd;
-      --card: #fff;
-      --radius: 10px;
-      --nav-bg: #fff;
-    }
-    body { font-family: 'Atkinson Hyperlegible', Aptos, 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem; }
-    a { color: var(--accent); }
-    a:hover { text-decoration: underline; }
-
-    /* Skip link */
-    .skip-link { position: absolute; left: -9999px; top: 0; background: var(--accent); color: #fff; padding: 8px 16px; border-radius: 0 0 6px 6px; z-index: 999; }
-    .skip-link:focus { left: 16px; }
-
-    /* Nav */
-    header { background: var(--nav-bg); border-bottom: 1px solid var(--border); }
-    nav { max-width: 1100px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
-    .nav-brand { font-weight: 700; font-size: 1.15rem; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 8px; }
-    .nav-brand svg { width: 28px; height: 28px; fill: var(--accent); flex-shrink: 0; }
-    nav ul { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; margin-left: auto; }
-    nav ul a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
-    nav ul a:hover { color: var(--accent); }
-
-    /* Main */
-    main { max-width: 820px; margin: 0 auto; padding: 48px 24px 80px; }
-    .badge { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 0.04em; text-transform: uppercase; }
-    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; line-height: 1.25; }
-    .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 40px; }
-    h2 { font-size: 1.25rem; font-weight: 700; margin: 36px 0 12px; border-left: 4px solid var(--accent); padding-left: 12px; }
-    p { margin-bottom: 14px; color: #2a2a2a; }
-    ul, ol { margin: 0 0 16px 20px; }
-    li { margin-bottom: 6px; color: #2a2a2a; }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 24px; }
-
-    /* Sources list */
-    .sources { list-style: none; margin: 0; padding: 0; }
-    .sources li { border-bottom: 1px solid var(--border); padding: 10px 0; }
-    .sources li:last-child { border-bottom: none; }
-
-    /* Footer */
-    footer { background: #1a1a1a; color: #ccc; padding: 32px 24px; }
-    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center; }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
-    .footer-links a { color: #aaa; font-size: 0.85rem; text-decoration: none; }
-    .footer-links a:hover { color: #fff; }
-    .footer-note { font-size: 0.8rem; color: #777; }
-  </style>
+  <meta name="description" content="Deutscher Projektplan für die Eventa Access Unternehmenswebsite im Fach Daten- und Informatikrecht.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Zum Inhalt springen</a>
-
-  <header>
-    <nav aria-label="Hauptnavigation">
-      <a href="index.html" class="nav-brand" aria-label="Eventa Access – Startseite">
-        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18"/><path d="M12 20h16M20 12v16" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
-        Eventa Access
-      </a>
-      <ul>
-        <li><a href="index.html">Start</a></li>
-        <li><a href="features.html">Funktionen</a></li>
-        <li><a href="about.html">Projekt</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-      </ul>
-    </nav>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Eventa Access Startseite"><img src="brand-symbol.svg" alt="" width="42" height="42"><span>Eventa Access</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span><span class="sr-only">Navigation öffnen</span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation" data-nav>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="features.html">Funktionen</a></li>
+          <li><a href="about.html">Projekt</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <span class="badge">Aufgabe 0</span>
-    <h1>Projektplan</h1>
-    <p class="lead">
-      Diese Seite dokumentiert die grundlegenden Entscheidungen für das Webshop-Projekt im Rahmen der Lehrveranstaltung Daten- und Informatikrecht. Ich habe mich für eine fiktive Plattform rund um barrierearme Eventbuchungen entschieden – das Thema hat mir gut gefallen, weil Barrierefreiheit hier direkt zum Produkt selbst gehört und nicht nur eine technische Pflicht ist.
-    </p>
+    <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Plan auf Deutsch</p>
+        <h1>Projektplan für die Unternehmenswebsite</h1>
+        <p class="lead">Der wichtigste Punkt in Daten- und Informatikrecht ist die nachvollziehbare Dokumentation: Die Website muss zeigen, welche Rechte, Pflichten, Datenflüsse und Schutzmaß bedacht wurden.</p>
 
-    <h2>Das Produkt: Eventa Access</h2>
-    <div class="card">
-      <p>
-        Eventa Access ist eine digitale Plattform für kleine Kulturorte und Veranstalter. Die Idee: Wer eine Veranstaltung plant, soll auf einen Blick sehen, welche Zugangsmöglichkeiten angeboten werden – Rollstuhlplätze, Untertitel, Begleitpersonen, ruhige Bereiche, Aufzüge und so weiter.
-      </p>
-      <p>Hauptfunktionen der Plattform:</p>
-      <ul>
-        <li>Eventverwaltung direkt im Browser, ohne Installation</li>
-        <li>Klare Darstellung von Eingang, Sitzbereich und Zugangswegen</li>
-        <li>Strukturierte Zugangsdaten für jedes Event (Lift, Rampe, Sitzplan)</li>
-        <li>Optional: Untertitelinformationen, Saalplan und Audiohinweise</li>
-        <li>Dashboard für Veranstalter mit mehreren Bühnen und Bereichen</li>
-      </ul>
-      <p><strong>Zielgruppe:</strong> Kleine Kulturorte (Theater, Clubs, Museen), Eventveranstalter und Besucherinnen bzw. Besucher, die vor dem Kauf wissen möchten, ob ein Ort für sie zugänglich ist.</p>
-    </div>
+        <div class="grid two">
+          <article class="card">
+            <h2>Aufgabe 0</h2>
+            <p><strong>Produkt:</strong> Eventa Access, eine digitale Plattform für barrierearme Eventbuchungen, Eventverwaltung und Zugangsinformationen.</p>
+            <p><strong>Zielgruppe:</strong> Eventbesucherinnen, Eventbesucher, kleine Veranstalter und Kulturorte.</p>
+            <p><strong>Unternehmen:</strong> Eventa Access GmbH, Wien, 9 Mitarbeitende.</p>
+            <p><strong>Geschäftsmodell:</strong> Monatliche Plattform-Pakete für Veranstalter plus optionale Ticketprovision pro Buchung.</p>
+          </article>
+          <article class="card">
+            <h2>Aufgaben 1 bis 6</h2>
+            <ol>
+              <li>Barrierefreiheit nach WCAG 2.2 AA sichtbar umsetzen.</li>
+              <li>Medienarten einbauen und Lizenzkette dokumentieren.</li>
+              <li>Drei Markenformen erklären und Nizza-Klassen zuordnen.</li>
+              <li>Nutzungsrechte und verbleibende Rechte in einer Lizenzseite definieren.</li>
+              <li>Datenschutzprozesse für Shop, Kontakt, Cookies und freiwillige Zugangshinweise beschreiben.</li>
+              <li>Kontaktseite und Impressum nach österreichischen Informationspflichten erstellen.</li>
+            </ol>
+          </article>
+        </div>
 
-    <h2>Das Unternehmen</h2>
-    <div class="card">
-      <ul>
-        <li><strong>Name:</strong> Eventa Access GmbH</li>
-        <li><strong>Standort:</strong> Museumsplatz 12, 1070 Wien, Österreich</li>
-        <li><strong>Mitarbeitende:</strong> 9 Personen (fiktiv)</li>
-        <li><strong>Gründung:</strong> 2023 (fiktiv)</li>
-        <li><strong>Branche:</strong> SaaS-Plattform für Veranstaltungsmanagement</li>
-      </ul>
-    </div>
+        <div class="notice">
+          <h2>Warum Eventa Access?</h2>
+          <p>Das Thema passt besonders gut, weil Barrierefreiheit nicht nur eine technische Pflicht ist, sondern direkt zum Produkt gehört. Die Plattform kann zeigen, ob Untertitel, Rollstuhlplätze, Begleitpersonen, Aufzüge und ruhige Bereiche vorhanden sind.</p>
+        </div>
 
-    <h2>Das Geschäftsmodell</h2>
-    <p>
-      Das Modell kombiniert monatliche Pakete für Veranstalter mit einer optionalen Ticketprovision pro Buchung. Die drei Pakete unterscheiden sich nach Funktionsumfang:
-    </p>
-    <ul>
-      <li><strong>Starter (10 €/Monat):</strong> Bis zu 3 Events, grundlegende Zugangsinformationen</li>
-      <li><strong>Plus (15 €/Monat):</strong> Untertitelinfos, Saalplan, strukturierte Zugangsdaten</li>
-      <li><strong>Pro (25 €/Monat):</strong> Mehrere Bühnen, Dashboard, Audioinfos, Wege- und Einlassplanung</li>
-    </ul>
-    <p>
-      Alle Pakete werden monatlich abgerechnet. Es gibt keine Mindestlaufzeit – das soll es auch für kleine Kulturorte attraktiv machen. Eine kostenlose Testphase wäre bei einem echten Launch sinnvoll (hier aber nicht umgesetzt, da es sich um ein Demo-Projekt handelt).
-    </p>
+        <h2>Empfohlene Abgabeschritte</h2>
+        <ol>
+          <li>Dateien in ein GitHub-Repository hochladen.</li>
+          <li>GitHub Pages unter Settings &gt; Pages aktivieren.</li>
+          <li>Startseite, Datenschutz, Impressum, Lizenz, Urheberrecht und Barrierefreiheit testen.</li>
+          <li>Mit WAVE oder axe DevTools prüfen und Ergebnis kurz dokumentieren.</li>
+          <li>EUIPO/TMview/WIPO-Recherche als Screenshot oder PDF zur Abgabe legen.</li>
+        </ol>
 
-    <h2>Übersicht über die Aufgaben</h2>
-    <p>Hier kurz zusammengefasst, was ich in den einzelnen Aufgaben umsetzen wollte:</p>
-    <ol>
-      <li><strong>Barrierefreiheit:</strong> WCAG 2.2 AA – Skip-Link, Kontrast, Tastaturnavigation, responsive Layout, Screenreader-Texte.</li>
-      <li><strong>Urheberrecht:</strong> Alle Medien selbst erstellt oder lizenzfrei; vollständige Lizenztabelle auf der Urheberrechtsseite.</li>
-      <li><strong>Marke:</strong> Drei verschiedene Markenformen (Wortmarke, Bildmarke, Hörmarke), Nizza-Klassen, About-us-Seite.</li>
-      <li><strong>Lizenz:</strong> Nutzungsrechte, verbleibende Rechte, Haftungsbeschränkungen auf einer eigenen Lizenzseite.</li>
-      <li><strong>Datenschutz:</strong> Datenschutzerklärung für Kontaktformular, Cookie-Auswahl und Analyse-Mock.</li>
-      <li><strong>Gewerbe:</strong> Kontaktseite und Impressum nach österreichischem Mediengesetz § 24.</li>
-    </ol>
-
-    <h2>Warum habe ich dieses Thema gewählt?</h2>
-    <p>
-      Barrierefreiheit ist ein Thema, das mich schon länger interessiert – und für dieses Projekt hat es gut gepasst, weil man es auf mehreren Ebenen zeigen kann: Das Produkt selbst wirbt mit Barrierefreiheit, und die Website muss gleichzeitig selbst barrierefrei sein. Das hat mir beim Abarbeiten der Aufgaben geholfen, weil alles thematisch zusammenhängt.
-    </p>
-    <p>
-      Außerdem konnte ich zeigen, dass Datenschutz und Barrierefreiheit sich gegenseitig beeinflussen – zum Beispiel bei freiwilligen Angaben zu Rollstuhlbedarf oder Begleitpersonen, die nach DSGVO besonders sensibel behandelt werden müssten.
-    </p>
-
-    <h2>Empfohlene Schritte zur Abgabe</h2>
-    <ol>
-      <li>Alle HTML-Dateien in ein GitHub-Repository hochladen.</li>
-      <li>GitHub Pages unter Settings → Pages aktivieren (Branch: main, Ordner: root).</li>
-      <li>Startseite, Datenschutz, Impressum, Lizenz, Urheberrecht und Barrierefreiheitserklärung im Browser testen.</li>
-      <li>Barrierefreiheit mit WAVE oder axe DevTools prüfen und das Ergebnis kurz dokumentieren.</li>
-      <li>Markenrecherche via EUIPO/TMview als Screenshot oder PDF zur Abgabe beilegen.</li>
-    </ol>
-
-    <h2>Verwendete Quellen und Tools</h2>
-    <ul class="sources">
-      <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">W3C: WCAG 2.2 – Web Content Accessibility Guidelines</a></li>
-      <li><a href="https://www.wipo.int/en/web/classification-nice" target="_blank" rel="noopener">WIPO: Nizza-Klassifikation</a></li>
-      <li><a href="https://euipo.europa.eu/ec2/" target="_blank" rel="noopener">EUIPO: TMclass – Markenklassen suchen</a></li>
-      <li><a href="https://www.tmdn.org/tmview/" target="_blank" rel="noopener">TMview – Markenrecherche</a></li>
-      <li><a href="https://commission.europa.eu/law/law-topic/data-protection/data-protection-explained_de" target="_blank" rel="noopener">Europäische Kommission: Datenschutz erklärt</a></li>
-      <li><a href="https://www.usp.gv.at/themen/brancheninformationen/information-und-kommunikation/impressumspflicht-gemaess-para-24-mediengesetz.html" target="_blank" rel="noopener">USP: Impressumspflicht gemäß § 24 Mediengesetz</a></li>
-    </ul>
+        <h2>Quellen für die Bearbeitung</h2>
+        <ul class="check-list">
+          <li><a href="https://www.w3.org/TR/WCAG22/">W3C: WCAG 2.2</a></li>
+          <li><a href="https://www.wipo.int/en/web/classification-nice">WIPO: Nizza-Klassifikation</a></li>
+          <li><a href="https://euipo.europa.eu/ec2/">EUIPO: TMclass</a></li>
+          <li><a href="https://www.tmdn.org/tmview/">TMview Markenrecherche</a></li>
+          <li><a href="https://commission.europa.eu/law/law-topic/data-protection/data-protection-explained_de">Europäische Kommission: Datenschutz erklärt</a></li>
+          <li><a href="https://www.usp.gv.at/themen/brancheninformationen/information-und-kommunikation/impressumspflicht-gemaess-para-24-mediengesetz.html">USP: Impressumspflicht nach Mediengesetz</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <nav class="footer-links" aria-label="Rechtliche Seiten">
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>Eventa Access GmbH, Wien. Fiktives studentisches Unternehmenswebsite-Projekt für Daten- und Informatikrecht.</p>
+      <div class="footer-links" aria-label="Rechtliche Seiten">
         <a href="projektplan.html">Projektplan</a>
         <a href="accessibility.html">Barrierefreiheit</a>
         <a href="copyright.html">Urheberrecht</a>
         <a href="license.html">Lizenz</a>
         <a href="privacy.html">Datenschutz</a>
         <a href="impressum.html">Impressum</a>
-      </nav>
-      <p class="footer-note">Eventa Access GmbH, Wien · Fiktives studentisches Projekt für Daten- und Informatikrecht</p>
+      </div>
     </div>
   </footer>
+  <aside class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" data-cookie-banner>
+    <h2 id="cookie-title">Cookie-Auswahl</h2>
+    <p id="cookie-text">Diese Projektseite nutzt notwendige lokale Speicherung für den Cookie-Hinweis. Analyse-Cookies sind nur gemockt.</p>
+    <div class="cookie-actions"><button class="button" type="button" data-cookie-choice="notwendig">Nur notwendige</button><button class="button secondary" type="button" data-cookie-choice="analyse-mock">Analyse-Mock erlauben</button></div>
+    <p class="status" role="status" aria-live="polite" data-cookie-status></p>
+  </aside>
 </body>
 </html>
+
