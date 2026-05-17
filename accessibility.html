@@ -17,8 +17,8 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span><span class="sr-only">Navigation öffnen</span></button>
       <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation" data-nav>
         <ul>
-          <li><a href="index.html">Tickets</a></li>
-          <li><a href="features.html">Events</a></li>
+          <li><a href="index.html">Software</a></li>
+          <li><a href="features.html">Funktionen</a></li>
           <li><a href="about.html">Projekt</a></li>
           <li><a href="contact.html">Kontakt</a></li>
         </ul>
@@ -31,34 +31,34 @@
       <div class="container narrow">
         <p class="eyebrow">Aufgabe 1</p>
         <h1>Barrierefreiheitserklärung</h1>
-        <p class="lead">Stand: 15. Mai 2026. Diese fiktive Projektwebsite wurde mit dem Ziel erstellt, WCAG 2.2 auf Konformitätsstufe AA zu erfüllen.</p>
+        <p class="lead">Stand: 15. Mai 2026. Diese Projektwebsite wurde so gebaut, dass sie die wichtigsten Anforderungen von WCAG 2.2 AA erfüllt.</p>
 
         <div class="notice">
-          <h2>Konformitätsstatus</h2>
-          <p>Nach Selbstbewertung ist die statische Website im Rahmen der Projektanforderungen weitgehend mit WCAG 2.2 AA vereinbar. Für eine echte Veröffentlichung wäre zusätzlich eine externe Prüfung mit Tools wie WAVE oder axe DevTools sowie ein manueller Screenreader-Test sinnvoll.</p>
+          <h2>Stand der Prüfung</h2>
+          <p>Die Seite wurde im Rahmen der Übung selbst geprüft. Für eine echte Veröffentlichung sollte man zusätzlich WAVE, axe DevTools und einen manuellen Screenreader-Test verwenden.</p>
         </div>
 
-        <h2>Umgesetzte Maß</h2>
+        <h2>Was umgesetzt wurde</h2>
         <ul class="check-list">
-          <li>Semantische HTML-Struktur mit Header, Navigation, Main-Bereich und Footer.</li>
-          <li>Skip-Link zum direkten Wechsel zum Hauptinhalt.</li>
-          <li>Eine klare Überschriftenhierarchie pro Seite.</li>
-          <li>Beschriftete Formularfelder und sichtbare Pflichtfeldprüfung.</li>
-          <li>Alternativtexte für informative Grafiken; dekorative Logos sind leer ausgezeichnet.</li>
-          <li>Hoher Farbkontrast, sichtbare Fokus-Stile und Tastaturbedienbarkeit.</li>
-          <li>Keine automatisch startenden Töne; die Hörmarke wird nur per Button abgespielt.</li>
-          <li>Responsives Layout für kleine und große Bildschirme.</li>
-          <li>Keine automatisch laufenden Animationen; Unterstützung von reduzierter Bewegung über `prefers-reduced-motion`.</li>
+          <li>Klare HTML-Struktur mit Header, Navigation, Hauptbereich und Footer.</li>
+          <li>Skip-Link, damit man direkt zum Inhalt springen kann.</li>
+          <li>Überschriften in einer sinnvollen Reihenfolge.</li>
+          <li>Beschriftete Formularfelder und sichtbare Fehlermeldungen.</li>
+          <li>Alternativtexte für wichtige Grafiken.</li>
+          <li>Guter Farbkontrast, sichtbarer Fokus und Bedienung mit der Tastatur.</li>
+          <li>Keine automatisch startenden Töne; die Hörmarke startet nur nach Klick.</li>
+          <li>Layout für Handy, Tablet und Desktop.</li>
+          <li>Reduzierte Bewegung wird über `prefers-reduced-motion` unterstützt.</li>
         </ul>
 
-        <h2>Besondere Maßnahmen für blinde Nutzerinnen und Nutzer</h2>
+        <h2>Für Screenreader und Tastatur</h2>
         <ul class="check-list">
           <li>Navigation, Warenkorb, Cookie-Auswahl und Kontaktformular sind ohne Maus bedienbar.</li>
           <li>Der mobile Navigationsbutton meldet seinen Zustand als geöffnet oder geschlossen.</li>
-          <li>Fehler im Kontaktformular werden direkt am Feld angezeigt, per `aria-live` angesagt und der Fokus springt zum ersten fehlerhaften Feld.</li>
-          <li>Statusmeldungen für Warenkorb, Checkout, Cookie-Auswahl und Hörmarke werden für Screenreader bereitgestellt.</li>
+          <li>Fehler im Kontaktformular werden direkt am Feld angezeigt und für Screenreader angesagt.</li>
+          <li>Statusmeldungen für Warenkorb, Checkout, Cookie-Auswahl und Hörmarke werden als Text ausgegeben.</li>
           <li>Die Hörmarke ist optional; alle wesentlichen Informationen sind auch als Text verfügbar.</li>
-          <li>Der Ticketshop erklärt Zugangsangaben wie Rollstuhlplätze, Untertitel und Begleitpersonen textlich.</li>
+          <li>Die Plattform erklärt Zugangsangaben wie Rollstuhlplätze, Untertitel und Begleitpersonen textlich.</li>
         </ul>
 
         <h2>Empfohlenes Prüfprotokoll</h2>
@@ -70,7 +70,7 @@
         </ol>
 
         <h2>Nicht barrierefreie Inhalte</h2>
-        <p>Es sind keine bewusst nicht barrierefreien Inhalte vorgesehen. Das groß Konzertbild ist dekorativer Seitenhintergrund; die eigentlichen Ticket- und Zugangsinformationen stehen als Text im HTML.</p>
+        <p>Es sind keine bewusst nicht barrierefreien Inhalte geplant. Das große Konzertbild ist nur Dekoration; die wichtigen Informationen stehen als normaler Text im HTML.</p>
 
         <h2>Feedback und Kontakt</h2>
         <p>Barrieren können an <a href="mailto:access@eventa.example">access@eventa.example</a> gemeldet werden. Alternativ steht die <a href="contact.html">Kontaktseite</a> zur Verfügung.</p>
@@ -80,10 +80,13 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <p>Eventa Access GmbH, Wien. Fiktives studentisches Ticketshop-Projekt für Daten- und Informatikrecht.</p>
+      <p>Eventa Access GmbH, Wien. Fiktives studentisches Software-Webshop-Projekt für Daten- und Informatikrecht.</p>
       <div class="footer-links" aria-label="Rechtliche Seiten">
         <a href="projektplan.html">Projektplan</a>
+        <a href="accessibility.html">Barrierefreiheit</a>
         <a href="copyright.html">Urheberrecht</a>
+        <a href="license.html">Lizenz</a>
+        <a href="privacy.html">Datenschutz</a>
         <a href="impressum.html">Impressum</a>
       </div>
     </div>

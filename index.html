@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eventa Access | Einfache Eventtickets</title>
-  <meta name="description" content="Fiktiver einfacher Ticketshop für Events mit klaren Infos zu Ort, Preis und Zugang.">
+  <title>Eventa Access | SaaS für barrierearme Eventbuchungen</title>
+  <meta name="description" content="Fiktiver Software-Webshop für eine SaaS-Plattform mit Eventverwaltung, Zugangsinformationen und barrierearmer Ticketdarstellung.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="main.js" defer></script>
@@ -17,8 +17,8 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span></span><span></span><span></span><span class="sr-only">Navigation öffnen</span></button>
       <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation" data-nav>
         <ul>
-          <li><a href="index.html" aria-current="page">Tickets</a></li>
-          <li><a href="features.html">Events</a></li>
+          <li><a href="index.html" aria-current="page">Software</a></li>
+          <li><a href="features.html">Funktionen</a></li>
           <li><a href="about.html">Projekt</a></li>
           <li><a href="contact.html">Kontakt</a></li>
         </ul>
@@ -29,12 +29,12 @@
   <main id="main">
     <section class="hero simple-hero" aria-labelledby="hero-title">
       <div class="container hero-content">
-        <p class="eyebrow">Eventtickets</p>
-        <h1 id="hero-title">Einfach Tickets finden und Zugang vorher kennen.</h1>
-        <p class="lead">Eventa Access ist ein fiktiver Ticketshop für Kultur, Musik und Shows. Jede Karte zeigt direkt Preis, Ort und wichtige Zugangsinformationen.</p>
+        <p class="eyebrow">Software-as-a-Service</p>
+        <h1 id="hero-title">Software für barrierearme Eventbuchungen.</h1>
+        <p class="lead">Eventa Access ist eine fiktive SaaS-Plattform für Veranstalter. Kulturorte können Events verwalten, Zugangsinformationen eintragen und Tickets barrierearm darstellen.</p>
         <div class="hero-actions">
-          <a class="button" href="#tickets">Tickets ansehen</a>
-          <a class="button secondary" href="contact.html">Kontakt</a>
+          <a class="button" href="#tickets">Pakete ansehen</a>
+          <a class="button secondary" href="features.html">Funktionen</a>
         </div>
       </div>
     </section>
@@ -42,56 +42,56 @@
     <section id="tickets" class="section" aria-labelledby="tickets-title">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Auswahl</p>
-          <h2 id="tickets-title">Drei Beispiel-Events</h2>
-          <p class="lead">Die Buchung ist nur eine Demo. Es werden keine echten Tickets verkauft und keine Zahlungsdaten verarbeitet.</p>
+          <p class="eyebrow">Webshop-Demo</p>
+          <h2 id="tickets-title">Drei SaaS-Pakete</h2>
+          <p class="lead">Die Buchung ist nur eine Demo. Es werden keine echten Softwarelizenzen verkauft und keine Zahlungsdaten verarbeitet.</p>
         </div>
 
         <div class="shop-layout simple-shop">
           <div class="grid three" role="list" aria-label="Ticketangebote">
             <article class="price-card" role="listitem">
-              <p class="ticket-meta">20. Juni | MuseumsQuartier Wien</p>
-              <h3>Open-Air Nacht</h3>
+              <p class="ticket-meta">Für kleine Kulturorte</p>
+              <h3>Starter</h3>
               <div class="access-tags" aria-label="Zugangshinweise">
-                <span>Stufenfreier Eingang</span>
-                <span>Sitzplätze</span>
+                <span>3 Events</span>
+                <span>Zugangshinweise</span>
               </div>
-              <p class="price">EUR 29</p>
+              <p class="price">EUR 29 / Monat</p>
               <ul>
-                <li>Musikabend im Freien.</li>
+                <li>Eventverwaltung im Browser.</li>
                 <li>Klare Infos zu Eingang und Sitzbereich.</li>
               </ul>
-              <button class="button" type="button" data-add-plan data-plan="Open-Air Nacht Ticket" data-price="29">Auswählen</button>
+              <button class="button" type="button" data-add-plan data-plan="Starter SaaS-Paket" data-price="29">Auswählen</button>
             </article>
 
             <article class="price-card" role="listitem">
-              <p class="ticket-meta">04. Juli | Stadtsaal Wien</p>
-              <h3>Kulturabend</h3>
+              <p class="ticket-meta">Für regelmäßige Events</p>
+              <h3>Plus</h3>
               <div class="access-tags" aria-label="Zugangshinweise">
                 <span>Untertitel</span>
-                <span>Reservierter Platz</span>
+                <span>Saalplan</span>
               </div>
-              <p class="price">EUR 49</p>
+              <p class="price">EUR 49 / Monat</p>
               <ul>
-                <li>Bühne, Musik und kurze Lesungen.</li>
+                <li>Strukturierte Zugangsdaten für Events.</li>
                 <li>Hinweise zu Aufzug und Sitzplatz.</li>
               </ul>
-              <button class="button" type="button" data-add-plan data-plan="Kulturabend Ticket" data-price="49">Auswählen</button>
+              <button class="button" type="button" data-add-plan data-plan="Plus SaaS-Paket" data-price="49">Auswählen</button>
             </article>
 
             <article class="price-card" role="listitem">
-              <p class="ticket-meta">18. August | Donauinsel</p>
-              <h3>Festival Tag</h3>
+              <p class="ticket-meta">Für größere Veranstalter</p>
+              <h3>Pro</h3>
               <div class="access-tags" aria-label="Zugangshinweise">
-                <span>Ruhige Zone</span>
+                <span>Dashboard</span>
                 <span>Audioinfos</span>
               </div>
-              <p class="price">EUR 89</p>
+              <p class="price">EUR 89 / Monat</p>
               <ul>
-                <li>Tagespass für mehrere Bühnen.</li>
+                <li>Mehrere Bühnen und Bereiche verwalten.</li>
                 <li>Infos zu Wegen, Pausen und Einlass.</li>
               </ul>
-              <button class="button" type="button" data-add-plan data-plan="Festival Tag Ticket" data-price="89">Auswählen</button>
+              <button class="button" type="button" data-add-plan data-plan="Pro SaaS-Paket" data-price="89">Auswählen</button>
             </article>
           </div>
 
@@ -110,20 +110,20 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Vor dem Kauf</p>
-          <h2 id="info-title">Alles Wichtige auf einen Blick</h2>
+          <h2 id="info-title">Alles Wichtige zur Software auf einen Blick</h2>
         </div>
         <div class="grid three">
           <article class="legal-box">
-            <h3>Preis und Ort</h3>
-            <p>Jedes Event zeigt Datum, Ort und Ticketpreis direkt auf der Karte.</p>
+            <h3>Paket und Preis</h3>
+            <p>Jedes SaaS-Paket zeigt Monatspreis und enthaltene Funktionen direkt im Webshop.</p>
           </article>
           <article class="legal-box">
             <h3>Zugang</h3>
-            <p>Hinweise zu Eingang, Sitzplatz, Untertiteln oder ruhigen Bereichen stehen vor der Auswahl.</p>
+            <p>Die Software macht Eingang, Sitzplatz, Untertitel und ruhige Bereiche vor der Buchung sichtbar.</p>
           </article>
           <article class="legal-box">
             <h3>Demo-Projekt</h3>
-            <p>Der Shop ist ein Unterrichtsprojekt. Der Warenkorb speichert keine echten Bestellungen.</p>
+            <p>Der Webshop ist ein Unterrichtsprojekt. Der Warenkorb speichert keine echten Bestellungen.</p>
           </article>
         </div>
       </div>
@@ -132,10 +132,12 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <p>Eventa Access GmbH, Wien. Fiktives studentisches Ticketshop-Projekt.</p>
+      <p>Eventa Access GmbH, Wien. Fiktives studentisches Software-Webshop-Projekt.</p>
       <div class="footer-links" aria-label="Rechtliche Seiten">
         <a href="projektplan.html">Projektplan</a>
         <a href="accessibility.html">Barrierefreiheit</a>
+        <a href="copyright.html">Urheberrecht</a>
+        <a href="license.html">Lizenz</a>
         <a href="privacy.html">Datenschutz</a>
         <a href="impressum.html">Impressum</a>
       </div>
